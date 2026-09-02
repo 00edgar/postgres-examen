@@ -23,7 +23,7 @@ LIMIT 1;
 
 SELECT p.nombre, SUM(dv.cantidad) AS total_vendidos
 FROM productos p
-JOIN detalle_ventas dv ON p.id_producto = dv.id_producto
+JOIN detalles_ventas dv ON p.id_producto = dv.id_producto
 GROUP BY p.nombre
 ORDER BY total_vendidos DESC;
 
